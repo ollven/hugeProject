@@ -4,8 +4,8 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.*
 version = "2021.2"
 
 project {
-    val numProjects = Integer.parseInt(DslContext.getParameter("numProjects", "20"))
-    val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject", "200"))
+    val numProjects = Integer.parseInt(DslContext.getParameter("numProjects"))
+    val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
 
     for (i in 0..numProjects) {
         subProject {
