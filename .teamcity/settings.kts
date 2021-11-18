@@ -33,11 +33,5 @@ project {
 object subProj_bt_2000_2000 : BuildType({
     name = "trivial_loong"
 
-    steps {
-        script {
-            scriptContent = """
-                echo "a"
-            """.trimIndent()
-        }
-    }
+
 })
