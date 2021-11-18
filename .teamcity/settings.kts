@@ -10,6 +10,7 @@ project {
         param("cd", "c")
         param("b", "b")
     }
+    buildType(subProj_bt_2000_2000)
     val numProjects = Integer.parseInt(DslContext.getParameter("numProjects"))
     val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
 
@@ -26,7 +27,10 @@ project {
             }
         }
     }
-    object subProj_bt_2000_2000 : BuildType({
+
+}
+
+object subProj_bt_2000_2000 : BuildType({
     name = "trivial_loong"
 
     steps {
@@ -37,4 +41,3 @@ project {
         }
     }
 })
-}
