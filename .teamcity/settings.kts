@@ -2,6 +2,10 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.*
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
+mport jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+import jetbrains.buildServer.configs.kotlin.buildFeatures.parallelTests
+import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
+import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
 
 
 create(DslContext.projectId, GitVcsRoot({
