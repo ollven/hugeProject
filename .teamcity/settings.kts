@@ -32,6 +32,10 @@ project {
         subProject {
             id("subProj_$i")
             name = "subProj $i"
+                vcs {
+        root(HttpsGithubComGradleGradleGit)
+      }
+
 
             for (j in 0..numConfigurationsPerProject) {
                 buildType {
