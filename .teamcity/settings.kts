@@ -44,12 +44,12 @@ project {
     val numConfigurationsPerProject=500
     //val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
 
-    for (i in 1..numProjects) {
+    for (i in 0..numProjects) {
         subProject {
             id("subProj_$i")
             name = "subProj $i"
 
-            for (j in 1..numConfigurationsPerProject) {
+            for (j in 0..numConfigurationsPerProject) {
                 buildType {
                     id("subProj_bt_$i" + "_$j")
                     name = "bt $i $j"
