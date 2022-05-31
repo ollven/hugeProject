@@ -28,7 +28,7 @@ project {
     val numConfigurationsPerProject=500
     //val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
 
-    for (i in 0..numProjects) {
+    for (i in 1..numProjects) {
         subProject {
             id("subProj_$i")
             name = "subProj $i"
@@ -39,20 +39,18 @@ project {
                     name = "bt $i $j"
                     features {
     
-                pullRequests {
-                 vcsRootExtId = "${HttpsGithubComGradleGradleGit.id}"
-                provider = github {
-                    authType = token {
-                  token = password("sec", "credentialsJSON:22315edf-7a6e-41f0-905f-7799fb08e9ca")
-             }
-             filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
-                 }
-    }
-}
-                }
+                        pullRequests {
+                        vcsRootExtId = "${HttpsGithubComGradleGradleGit.id}"
+                        provider = github {
+                            authType = token {
+                            token = password("sec", "credentialsJSON:22315edf-7a6e-41f0-905f-7799fb08e9ca")
+                                               }
+                       filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
+                                            }
+                                       }
+                                }
+                                                         }
             }
         }
     }
-
-}
 
