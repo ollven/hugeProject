@@ -11,8 +11,10 @@ project {
         param("b", "b")
     }
 
-    val numProjects = Integer.parseInt(DslContext.getParameter("numProjects"))
-    val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
+    //val numProjects = Integer.parseInt(DslContext.getParameter("numProjects"))
+    val numProjects=1
+    val numConfigurationsPerProject=500
+    //val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
 
     for (i in 0..numProjects) {
         subProject {
