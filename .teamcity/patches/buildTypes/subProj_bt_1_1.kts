@@ -11,6 +11,5 @@ accordingly, and delete the patch script.
 changeBuildType(RelativeId("subProj_bt_1_1")) {
     vcs {
         remove(RelativeId("HttpsGithubComGradleGradleGit"))
-        add(RelativeId("subProj_1_HttpsGithubComGradleGradleGit"))
     }
 }
