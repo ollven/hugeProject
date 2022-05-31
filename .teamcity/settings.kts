@@ -66,7 +66,9 @@ project {
                 authType = token {
                     token = "credentialsJSON:710498e1-c878-4b58-b5f1-cee3a258db6f"
                 }
-                filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
+                filterSourceBranch = ""
+                filterTargetBranch = ""
+                filterAuthorRole = PullRequests.GitHubRoleFilter.EVERYBODY
             }
         }
     }
