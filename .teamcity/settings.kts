@@ -13,7 +13,7 @@ create(DslContext.projectId, GitVcsRoot({
 
 
 
-version = "2021.2"
+version = "2022.04"
 
 project {
     params {
