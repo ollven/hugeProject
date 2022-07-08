@@ -42,7 +42,7 @@ project {
     }
     //val numProjects = Integer.parseInt(DslContext.getParameter("numProjects"))
     val numProjects=1
-    val numConfigurationsPerProject=5000
+    val numConfigurationsPerProject=800
     //val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
 
     for (i in 0..numProjects) {
