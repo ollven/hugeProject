@@ -58,7 +58,12 @@ project {
     vcs {
         root(HttpsGithubComGradleGradleGit)
     }
-
+    triggers {
+        add {
+            vcs {
+            }
+        }
+    }
     features {
         pullRequests {
             vcsRootExtId = "${HttpsGithubComGradleGradleGit.id}"
