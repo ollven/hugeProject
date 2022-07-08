@@ -12,7 +12,7 @@ accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("A")) {
     features {
-        val feature1 = find<PullRequests> {
+        remove {
             pullRequests {
                 vcsRootExtId = "ArtsVs_Hugeproj_HttpsGithubComGradleGradleGit"
                 provider = github {
@@ -22,9 +22,6 @@ changeBuildType(RelativeId("A")) {
                     filterAuthorRole = PullRequests.GitHubRoleFilter.MEMBER
                 }
             }
-        }
-        feature1.apply {
-            enabled = false
         }
     }
 }
