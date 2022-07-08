@@ -59,9 +59,9 @@ project {
         root(HttpsGithubComGradleGradleGit)
     }
     triggers {
-
+add {
             vcs {
-
+            }
         }
     }
     features {
