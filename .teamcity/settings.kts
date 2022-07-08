@@ -99,8 +99,8 @@ object A : BuildType({
 })
 
 object HttpsGithubComGradleGradleGit : GitVcsRoot({
-    name = "https://github.com/gradle/gradle.git"
-    url = "https://github.com/gradle/gradle.git"
+    name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
+    url = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
     branch = "refs/heads/master"
 })
 
