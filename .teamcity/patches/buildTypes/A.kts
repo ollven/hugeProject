@@ -12,7 +12,7 @@ accordingly, and delete the patch script.
 changeBuildType(RelativeId("A")) {
     params {
         add {
-            param("teamcity.commitStatusPublisher.githubContext", "Verify Pull Request")
+            param("teamcity.commitStatusPublisher.githubContext", "Verify Pull Request %build.number%")
         }
     }
 
