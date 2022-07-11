@@ -59,10 +59,6 @@ project {
     vcs {
         root(HttpsGithubComGradleGradleGit)
     }
-triggers {
-    vcs {
-    }
-}
 
                 }
             }
