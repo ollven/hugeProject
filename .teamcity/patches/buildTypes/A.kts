@@ -10,6 +10,12 @@ To apply the patch, change the buildType with id = 'A'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("A")) {
+    params {
+        add {
+            param("teamcity.commitStatusPublisher.githubContext", "Verify Pull Request")
+        }
+    }
+
     features {
         add {
             commitStatusPublisher {
