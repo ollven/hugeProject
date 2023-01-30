@@ -5,46 +5,16 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 
-/*
-The settings script is an entry point for defining a TeamCity
-project hierarchy. The script should contain a single call to the
-project() function with a Project instance or an init function as
-an argument.
-
-VcsRoots, BuildTypes, Templates, and subprojects can be
-registered inside the project using the vcsRoot(), buildType(),
-template(), and subProject() methods respectively.
-
-To debug settings scripts in command-line, run the
-
-    mvnDebug org.jetbrains.teamcity:teamcity-configs-maven-plugin:generate
-
-command and attach your debugger to the port 8000.
-
-To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
--> Tool Windows -> Maven Projects), find the generate task node
-(Plugins -> teamcity-configs -> teamcity-configs:generate), the
-'Debug' option is available in the context menu for the task.
-*/
-
 version = "2021.2"
 
 project {
 
     vcsRoot(HttpsGithubComGradleGradleGit)
 
-    buildType(A)
 
-    params {
-        password("sec", "credentialsJSON:22315edf-7a6e-41f0-905f-7799fb08e9cd")
-        param("a", "a")
-        param("cd", "cjss")
-        param("b", "b")
-    }
-    //val numProjects = Integer.parseInt(DslContext.getParameter("numProjects"))
     val numProjects=1
     val numConfigurationsPerProject=800
-    //val numConfigurationsPerProject = Integer.parseInt(DslContext.getParameter("numConfigurationsPerProject"))
+
 
     for (i in 0..numProjects) {
         subProject {
@@ -66,15 +36,6 @@ project {
     }
 }
 
-object A : BuildType({
-    name = "a"
-
-    vcs {
-        root(HttpsGithubComGradleGradleGit)
-    }
-
-
-})
 
 object HttpsGithubComGradleGradleGit : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
